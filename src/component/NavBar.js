@@ -8,6 +8,7 @@ const NavBar = () => {
   const routeResult = useRoutes(routes);
   const [ currentUrl, setCurrentUrl ] = useState('Titles');
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const url = window.location.href;
     const path = url.split('/')[3]
@@ -15,7 +16,7 @@ const NavBar = () => {
       setCurrentUrl('Title')
     }
     setCurrentUrl(path)
-  })
+  },)
 
   return (
     <>
