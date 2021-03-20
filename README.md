@@ -2,7 +2,7 @@
 A simple web application 
 
 # View App
-    * Host App   https://sample-mov.herokuapp.com/
+    * Host App   https://media-list.netlify.app/
 
 # Technologies Used
    * Front-end: React
