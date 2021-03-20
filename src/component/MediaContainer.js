@@ -2,7 +2,6 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import styled from 'styled-components';
 import MovieCard from './MovieCard';
-import Footer from './Footer';
 
 const url = 'https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json';
 
@@ -24,7 +23,7 @@ const MediaContainer = ({ type }) => {
         <div className="image-cover">
             {data.entries.filter((arr) => arr.releaseYear >= 2010 && arr.programType === type)
             .sort((a, b) => a.title.localeCompare(b.title))
-            .map((v, index) => <MovieCard data={v} key={index}/>)
+            .map((v, index) => <MovieCard data={v} key={index}/>).slice(0, 21)
             }
         </div>
       )
